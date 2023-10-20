@@ -22,7 +22,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="32dp">
+                android:layout_margin="25dp">
 
 
                 <ImageView
@@ -61,9 +61,114 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <LinearLayout
+                android:layout_width="352dp"
+                android:layout_height="386dp"
+                android:layout_margin="32dp"
+                android:background="@drawable/cubito"
+                android:orientation="vertical"
+                android:padding="32dp">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Direccion 1: "
+                    android:textColor="#ffff"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtD1"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:hint="Latitud, Longitud"
+                    android:inputType="text"
+                    android:padding="8dp"
+                    android:textColor="#a2a4b5"
+                    android:textColorHint="#a2a4b5"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Direccion 2: "
+                    android:textColor="#ffff"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtD2"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:hint="Latitud, Longitud"
+                    android:inputType="text"
+                    android:padding="8dp"
+                    android:textColor="#a2a4b5"
+                    android:textColorHint="#a2a4b5"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Direccion 3: "
+                    android:textColor="#ffff"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtD3"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:hint="Latitud, Longitud"
+                    android:inputType="text"
+                    android:padding="8dp"
+                    android:textColor="#a2a4b5"
+                    android:textColorHint="#a2a4b5"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mi Direccion: "
+                    android:textColor="#ffff"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtMD"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:hint="Latitud, Longitud"
+                    android:inputType="text"
+                    android:padding="8dp"
+                    android:textColor="#a2a4b5"
+                    android:textColorHint="#a2a4b5"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnsiguiente"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"></LinearLayout>
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:layout_marginStart="32dp"
+                android:textColor="#ffff"
+                android:textStyle="bold"
+                android:textSize="18dp"
+
+                android:background="@drawable/cubito"
+                android:text="Siguiente" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
