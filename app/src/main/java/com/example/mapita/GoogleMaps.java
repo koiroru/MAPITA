@@ -10,12 +10,15 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class GoogleMaps extends AppCompatActivity implements OnMapReadyCallback{
 
     Button Regreso;
+    double lat = 0.0;
+    double lon = 0.0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,24 +49,37 @@ public class GoogleMaps extends AppCompatActivity implements OnMapReadyCallback{
     public void onMapReady(@NonNull GoogleMap googleMap) {
         GoogleMap mMap = googleMap;
 
-        LatLng puntito1 = new LatLng(-54,171);
-        mMap.addMarker(new MarkerOptions().position(puntito1).title("Direccion 1"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(puntito1));
+        double lon1 = getIntent().getDoubleExtra("lo1", 0.0);
+        double lat1 = getIntent().getDoubleExtra("la1", 0.0);
 
-        LatLng puntito2 = new LatLng(34,168);
-        mMap.addMarker(new MarkerOptions().position(puntito2).title("Direccion 2"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(puntito2));
+        double lon2 = getIntent().getDoubleExtra("lo2", 0.0);
+        double lat2 = getIntent().getDoubleExtra("la2", 0.0);
 
-        LatLng puntito3 = new LatLng(-64,150);
-        mMap.addMarker(new MarkerOptions().position(puntito3).title("Direccion 3"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(puntito3));
+        double lon3 = getIntent().getDoubleExtra("lo3", 0.0);
+        double lat3 = getIntent().getDoubleExtra("la3", 0.0);
 
-        LatLng mipuntito = new LatLng(-94,171);
-        mMap.addMarker(new MarkerOptions().position(mipuntito).title("Direccion 4"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(mipuntito));
+        double lon4 = getIntent().getDoubleExtra("lo4", 0.0);
+        double lat4 = getIntent().getDoubleExtra("la4", 0.0);
 
+        LatLng puntito1 = new LatLng(lon1, lat1);
+        mMap.addMarker(new MarkerOptions().position(puntito1)
+                .title("Primera Direccion")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
 
+        LatLng puntito2 = new LatLng(lon2, lat2);
+        mMap.addMarker(new MarkerOptions().position(puntito2)
+                .title("Segunda Direccion")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
 
+        LatLng puntito3 = new LatLng(lon3, lat3);
+        mMap.addMarker(new MarkerOptions().position(puntito3)
+                .title("Tercera Direccion")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+
+        LatLng mipuntito = new LatLng(lon4, lat4);
+        mMap.addMarker(new MarkerOptions().position(mipuntito)
+                .title("Mi Direccion")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
 
 
 
